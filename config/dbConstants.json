@@ -1,0 +1,13 @@
+{
+    "USERS": {
+        "STATUS": {
+            "BLOCKED": 0,
+            "PENDING": 1,
+            "ACTIVE": 2
+        },
+        "ROLE": {
+            "ADMIN": 1,
+            "USER": 2
+        }
+    }
+}
