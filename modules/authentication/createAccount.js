@@ -12,7 +12,6 @@ module.exports = [
       var userParam = req.body;
       var email = req.body.email;
 
-
       if (await User.findOne({ email: email })) {
         return responseUtil.badRequestErrorResponse(res, 'Email Exists');
       }
@@ -25,9 +24,9 @@ module.exports = [
       }
 
       // save user
-      await user.save();
-
+      var savedDetails = await user.save();
       responseUtil.successResponse(res, 'Account Creation Successful', {
+        data: savedDetails,
         // token: token,
       });
     } catch (ex) {

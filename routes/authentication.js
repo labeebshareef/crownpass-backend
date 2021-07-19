@@ -13,6 +13,8 @@ const createAccount = require('../modules/authentication/createAccount');
 const userList = require('../modules/authentication/userList');
 const covidStatuschange = require('../modules/authentication/covidStatuschange');
 const getUser = require('../modules/authentication/getUser');
+const scheduleVaccination = require('../modules/authentication/scheduleVaccination');
+const deleteVaccinationSchedule = require('../modules/authentication/deleteVaccinationSchedule');
 
 router.post('/login', login);
 router.post('/createAccount', createAccount);
@@ -25,5 +27,7 @@ router.post('/password/forgot', forgotPassword);
 router.post('/password/change', changePassword);
 router.get('/userList/:role', userList);
 router.get('/logout', logout);
+router.post('/scheduleVaccination', scheduleVaccination);
+router.post('/deleteVaccinationSchedule', deleteVaccinationSchedule);
 
 module.exports = router;

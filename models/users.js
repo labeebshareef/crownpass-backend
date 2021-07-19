@@ -17,6 +17,7 @@ var userSchema = new Schema({
   password: String,
   role: String,
   covidStatus: String,
+  vaccinationDate: String,
   status: {
     type: Number,
     enum: Object.values(config.DB_CONSTANTS.USERS.STATUS),
